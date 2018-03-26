@@ -7,6 +7,22 @@
 kafka-docker
 ============
 
+## 写在最前面的话
+这个镜像是直接拷贝的 [wurstmeister/kafka-docker](https://github.com/wurstmeister/kafka-docker),主要是用来本地测试环境的开发
+启动之前需要安装 docker-compose,然后编辑配置文件 docker-compose.yml,将`KAFKA_ADVERTISED_HOST_NAME`和`ZK_HOSTS`改成**你自己**的本地所属 ip 就行,然后
+```
+docker-compose up -d
+```
+根据网速等容器启动完毕之后,浏览器打开
+```
+http://localhost:9000
+```
+就能进入 kafka-manager 的 web 管理界面,其他的集群什么的[wurstmeister/kafka-docker](https://github.com/wurstmeister/kafka-docker)这里也有相关的配置,有需求的就先自己啃,等我工作上用到了我再出一个配置吧....
+
+
+=======================================================
+
+
 Dockerfile for [Apache Kafka](http://kafka.apache.org/)
 
 The image is available directly from [Docker Hub](https://hub.docker.com/r/wurstmeister/kafka/)
